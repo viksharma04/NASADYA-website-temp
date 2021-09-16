@@ -1,165 +1,376 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>NASADYA</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="utilities.css">
-    <link rel="icon" href="https://i.ibb.co/myQP1rG/NASADYA-Icon-rev-yellow-300.png"/>
-</head>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 
 
-<body>
+:root{
+    --prim-color: #FFFFFF;
+    --dark-color: #02020A;
+    --blue-color: #0C326E;
+    --yellow-color:#E99F0C;
+    --yellow-color-two:#e9b651;
+    --grey-color: #DFDFE2;
+    --grey-color2:rgba(223, 223, 226, 0.719);
+  }
+  
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--dark-color);
+    /* background-image: url(https://images.unsplash.com/photo-1467579424161-6bbc141569d7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);  */
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+
+ul{
+      list-style-type: none;
+      display: flex;
+  }
+
+  a{
+    text-decoration: none;
+  }
+/* Header section */
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 70px;
+  position: sticky;
+  top:0;
+  background-color: black;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+
+}
+
+.navbar a{
+  float: left;
+  color: var(--prim-color);
+  font-weight: bold;
+  padding: 10px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.navbar a:hover{
+  /* background-color: white; */
+  border-radius: 5px;
+  border: 1px solid white;
+  /* color: #02020A; */
+  transition: 0.3s ease-in;
+}
+
+.logo{
+  object-fit: contain;
+}
+
+.header{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/1556704/pexels-photo-1556704.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: sticky;
+  top: 10px;
+  z-index: -1;
+}
+
+.bus-thesis{
+  padding: 90px 90px;
+  width: 60%;
+  font-size: 60px;
+  color: #FFFFFF;
+}
+
+/* Stack & Technology */
 
 
-    <section class="main-wrapper">
-        
-        <nav class="navbar p-1">
-            <img src="https://i.ibb.co/mJ5TpF0/NASADYA-Logo-BW-H-rev-yellow-300.png" alt="NASADYA-Logo-BW-H-rev-yellow-300" border="0">
-            <ul>
-                <li><a href="index.html">About</a></li>
-                <li><a href="#contact-form">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <section class="header">
+.technology{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
 
-            <div class="bus-thesis">
-                Creating sustainable & equitable energy systems for the future
-            </div>
+.main-heading{
+  font-size: 30px;
+  padding: 20px 40px;
+}
 
-        </section>
+.main-heading sub{
+  font-size: 20px;
+}
 
-        <section class="technology p-1">
+.our-tech{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 20px;
+  width: 100%;
+  padding: 30px 20px;
+}
 
-            <div class="main-heading">
-                Combating climate change requires zero carbon fuels and hydrogen can be one <br> <br>
-                However, zero carbon hydrogen is too expensive to produce and the current hydrogen generation contributes 800 million tons of CO2 ~ 2% of global emissions <br><br>
-                <b>We deliver zero carbon hydrogen at $1.5 per kilogram</b> 
-            </div>
+.h11{
+  font-size: 30px;
+  padding: 20px 10px;
+}
 
-            <div class="our-tech">
-                <div class="stack-img">
-                    <img src="https://i.ibb.co/2WRWZzm/Nasadya-tech.jpg" alt="Nasadya-tech" border="0">
-                </div>
+.stack-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+}
 
-                <div class="tech-points">
-                    <div class="points">
-                        <div class="p1">
-                            <h3>40% higher efficency</h3>
-                            <p>by lowering voltage drop & ripple factor of the system</p>
-                        </div>
-                        <div class="p2">
-                            <h3>20% lower capital costs</h3>
-                            <p>by increasing membrane capacity and durability</p>
-                        </div>
-                        <div class="p3">
-                            <h3>25% lower manufacturing costs</h3>
-                            <p>by leading manufacture learning curve</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+.stack-img img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
 
-        </section>
+.tech-points{
+  color: var(--dark-color);
+}
 
-        <!-- Our Team -->
+.tech-points h3{
+  font-size: 25px;
+}
 
-        <section class="team-banner">
+.p1, .p2, .p3{
+  width: 100%;
+}
 
-            <div class="people-grid">
+.points{
+  display: flex;
+  flex-direction: row;
+}
 
-            </div>
+/* Interest Banner */
 
-        </section>
+.interest-banner{
+  background-color: var(--blue-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px; 
+}
 
-        <!-- Interest Banner -->
-            
-        <section class="interest-banner">
-            <h1>Interested?</h1>
-            <h3>NASADYA is developing innovative tech to accelerate the clean energy transistion. If you are interested please contact us!</h3>
-            <a href="#contact-form">
-                <button class="contact-btn">
-                    CONTACT US!
-                </button>
-            </a>
-            
-        </section>
+.interest-banner h1{
+  font-size: 45px;
+  font-weight: bold;
+}
 
-        <!-- Credibility Banner -->
+.interest-banner h3{
+  padding-bottom: 20px;
+}
 
-        <section class="cred">
-            <h1>Supported By</h1>
-            <div class="card-container">
-                <a href="#">
-                    <div class="card one">
-                        <img src="https://i.ibb.co/sgHHw3f/iventurepng-removebg-preview.png" alt="iventurepng-removebg-preview" border="0">
-                        <h2>iVenture Accelerator</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus rem accusantium animi pariatur praesentium dolor placeat repudiandae corrupti, inventore nulla, blanditiis aspernatur repellendus commodi id eaque adipisci. Sapiente, qui optio?</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="card two">
-                        <img src="https://i.ibb.co/q0g3nzp/NAE-removebg-preview.png" alt="NAE-removebg-preview" border="0">
-                        <h2>National Academy of Engineering</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tempore eaque dolores eos enim cumque fugit accusamus molestiae voluptas. Dolores quae doloremque optio corrupti illum quos numquam! Quia, atque rem!</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="card three">
-                        <img src="https://i.ibb.co/pQVpQ66/Rice-Business-Plan-removebg-preview.png" alt="Rice-Business-Plan-removebg-preview" border="0">
-                        <h2>Rice Business Plan Competition</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, veniam alias. Dignissimos, error nesciunt reiciendis illum modi atque obcaecati unde mollitia repellendus, corporis ipsum maiores accusantium voluptate eos, deserunt quas.</p>
-                    </div>
-                </a>
-               <a href="#">
-                <div class="card four">
-                    <img src="https://i.ibb.co/64nYYJ7/MIT.png" alt="MIT" border="0">
-                    <h2>Climate Tech & Energy Prize - MIT</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae nam tenetur rerum doloribus debitis quidem fuga praesentium tempora nemo voluptatum culpa doloremque, rem unde exercitationem cum. Debitis optio architecto sit?</p>
-                </div>
-                </a>
-                <a href="#">
-                <div class="card five">
-                    <img src="https://i.ibb.co/XYbJypx/Venture-Well-removebg-preview.png" alt="Venture-Well-removebg-preview" border="0">
-                    <h2>Venture Well</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur mollitia natus inventore dolorem, itaque illum assumenda architecto ex perspiciatis aut eaque aliquam, fuga reiciendis recusandae corrupti cum modi ea eligendi!</p>
-                </div>
-                </a>
-                <a href="#">
-                <div class="card six">
-                    <img src="https://i.ibb.co/BCsvQqP/RCEA.png" alt="RCEA" border="0">
-                    <h2>Rice Alliance Clean Energy Accelerator</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio placeat accusamus, illum eos blanditiis ad ducimus animi delectus eaque ipsum explicabo, accusantium nostrum doloribus necessitatibus minima quod harum similique!</p>
-                </div>    
-                </a>
-            </div>    
-        </section>
-    </section>
+.interest-banner a{
+  padding: 20px;
+}
 
-    <!-- Contact Form Section -->
-    <section id="contact-form">
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shraf6jWRJ8Ah4Iag?backgroundColor=red" frameborder="0" onmousewheel="" width="100%" height="877" style="background: white; border: 1px solid #ccc;"></iframe>
-    </section>
+.interest-banner a{
+  justify-self: center;
+}
 
-     <!-- Footer -->
-     <footer class="footer">
-        <div class="footer-container">
-            <div>
-                <p>NASADYA</p>
-                <i class="far fa-copyright"> 2021</i>
+.contact-btn{
+  display: inline-block;
+  padding: 10px 10px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  border: white 2px solid;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
+}
 
-            </div>
+.contact-btn:hover{
+  background-color: white;
+  color: black;
+  transform: scale(0.95);
+}
 
-            <div class="social-container">
-                <a href="https://www.linkedin.com/company/nasadya/"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="mailto: cgulati4@illinois.edu"><i class="fa fa-envelope fa-2x"></i></a>
-            </div>
-        </div>
-    </footer>
+/* Credibility Section */
 
-</body>
+.cred{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  background-color: var(--prim-color);
+}
+
+.cred h1{
+  font-size: 40px;
+}
+
+.card-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  grid-gap: 10px;
+}
+
+.card-container img{
+  width: 100px;
+  height: 100px;
+}
+
+/* .one, .two, .three, .four, .five, .six{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  padding: 0 0;
+} */
+
+.one img{
+  width: 150px;
+  height: 150px;
+}
+
+.two img{
+  width: 150px;
+  height: 150px;
+}
+
+.three img{
+  width: 250px;
+  height: auto;
+  padding-top: 25px;
+}
+
+.four img{
+  width: auto;
+  height: 150px;
+}
+
+.five img{
+  height: 150px;
+  width: 150px;
+}
+
+.six img{
+  padding-top: 20px;
+  width: auto;
+  height: 100px;
+}
+
+.six h2{
+  padding-top: 50px;
+}
+
+
+.card-container .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Footer */
+.footer{
+  background-color: black;
+  padding: 20px 20px ;
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--prim-color);
+}
+
+.footer-container a{
+  color: var(--prim-color);
+  padding: 10px;
+}
+
+/* Mobile */
+@media(max-width: 768px){
+
+  .header{
+    max-height: 300px;
+  }
+
+
+  .bus-thesis{
+    font-size: inherit;
+    padding: 125px 30px;
+  }
+
+  .logo{
+    width: 175px;
+  }
+
+  .navbar a{
+    padding-top: 10px;
+  }
+
+  .technology{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .main-heading{
+    padding-top: 10px;
+    padding: 0 0;
+  }
+
+  .stack-img img{
+    width: 100%;
+  }
+
+  .stack-img{
+    padding: 20px 20px;
+  }
+
+  .main-heading{
+    font-size: inherit;
+  }
+
+  .interest-banner{
+    padding: 20px 20px;
+  }
+
+  .card-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .our-tech{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+  }
+
+}
