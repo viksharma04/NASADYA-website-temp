@@ -357,18 +357,13 @@ ul{
 /* Mobile */
 @media(max-width: 768px){
 
-  a{
-    font-size: inherit;
-  }
-
-  .about-heading{
-
+  .main-heading{
+    padding-top: 30px;
   }
 
   .header{
     max-height: 300px;
   }
-
 
   .bus-thesis{
     font-size: inherit;
@@ -381,6 +376,7 @@ ul{
 
   .navbar a{
     padding-top: 10px;
+    font-size: 10px;
   }
 
   .technology{
@@ -390,8 +386,8 @@ ul{
     flex-direction: column;
   }
 
-  .about-heading a{
-    font-size: inherit;
+  .about-heading{
+    display: none;
   }
 
   .points{
@@ -406,11 +402,6 @@ ul{
   .stack-img img{
     width: inherit;
     height: auto;
-  }
-
-  .main-heading{
-    padding-top: 10px;
-    padding: 0 0;
   }
 
   .stack-img img{
